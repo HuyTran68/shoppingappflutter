@@ -1,0 +1,23 @@
+Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Tittles('Thông tin khách hàng'),
+          userListtitle('Email','email', Icons.email, context),
+          userListtitle('Điện Thoại','23123', Icons.phone, context),
+          userListtitle('Địa Chỉ','1513', Icons.local_shipping, context),
+          userListtitle('Joined Date','joined', Icons.watch_later, context),
+      ListTileSwitch(
+        value: _value,
+        leading: Icon(Icons.wb_sunny),
+        onChanged: (value) {
+          setState(() {
+            _value = value;
+          });
+        },
+        visualDensity: VisualDensity.comfortable,
+        switchType: SwitchType.cupertino,
+        switchActiveColor: Colors.indigo,
+        title: Text('Dark Mode'),
+      ),],
+      )
